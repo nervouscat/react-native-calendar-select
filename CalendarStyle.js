@@ -47,11 +47,12 @@ export default StyleSheet.create({
   resultText: {
     fontSize: resultFontSize,
     marginVertical: 4,
-    fontWeight: '200'
+    fontFamily:"RockoFLF-Bold",
   },
   clearText: {
     fontSize: 18,
-    fontWeight: '400'
+    fontWeight: '400',
+    fontFamily:"GothamPro"
   },
   startText: {
     textAlign: 'left'
@@ -68,7 +69,8 @@ export default StyleSheet.create({
   weekText: {
     flex: 1,
     fontSize: weekTextFontSize,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily:"GothamPro"
   },
   scroll: {
     flex: 9,
@@ -79,26 +81,29 @@ export default StyleSheet.create({
     flex: 1
   },
   btn: {
-    flex: 1.5,
+    flex: 1.7,
     justifyContent: 'center',
     alignItems: 'center'
   },
   confirmContainer: {
     overflow: 'hidden',
-    backgroundColor: 'rgba(255, 255, 255, 0.40)',
+    backgroundColor: 'rgba(255, 88, 114, 1)',
     borderRadius: 4,
-    margin: 14,
+    margin: 10,
     flex: 1,
     alignSelf: 'stretch',
     justifyContent: 'center'
   },
   confirmContainerDisabled: {
-    backgroundColor: 'rgba(255, 255, 255, 0.20)'
+    backgroundColor: 'rgba(255, 88, 114, 0.40)'
   },
   confirmText: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
-    textAlign: 'center'
+    fontFamily:"RockoFLF-Bold",
+    textAlign: 'center',
+    color: 'rgba(255, 255, 255, 1)'
+
   },
   confirmTextDisabled: {
     color: 'rgba(255, 255, 255, 0.40)'

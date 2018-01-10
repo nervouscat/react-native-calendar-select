@@ -2,7 +2,8 @@
  * Created by TinySymphony on 2017-05-08.
  */
 
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {
   View,
   Text,
@@ -54,12 +55,12 @@ export default class Calendar extends Component {
       'w': ['', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
       'weekday': ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       'text': {
-        'start': 'Start',
-        'end': 'End',
-        'date': 'Date',
-        'save': 'Save',
-        'clear': 'Reset',
-        'selected': 'Selected'
+        'start': 'start',
+        'end': 'end',
+        'date': 'date',
+        'save': 'save',
+        'clear': 'reset',
+        'selected': 'selected'
       },
       'date': 'DD / MM'
     },
@@ -210,7 +211,7 @@ export default class Calendar extends Component {
       endWeekdayText: ''
     });
   }
-  
+
   confirm () {
     const {
       startDate,
@@ -245,7 +246,7 @@ export default class Calendar extends Component {
     let subBack = {backgroundColor: subColor};
     if(this.props.singleDate==true){
       return ( <View style={styles.result}>
-            
+
             <View style={styles.resultPart}>
               <Text style={[styles.resultText, styles.endText, subFontColor]}>
                 {endDateText || this._i18n('selected', 'text')}
@@ -265,7 +266,7 @@ export default class Calendar extends Component {
                 {startWeekdayText || this._i18n('date', 'text')}
               </Text>
             </View>
-            <View style={[styles.resultSlash, subBack]}/>
+            
             <View style={styles.resultPart}>
               <Text style={[styles.resultText, styles.endText, subFontColor]}>
                 {endDateText || this._i18n('end', 'text')}
@@ -289,11 +290,12 @@ export default class Calendar extends Component {
     const {
       mainColor = '#15aaaa',
       subColor = '#fff',
+      selectedColor = '#34bbc5',
       borderColor = 'rgba(255, 255, 255, 0.50)'
     } = this.props.color;
     let color = {mainColor, subColor, borderColor};
     let mainBack = {backgroundColor: mainColor};
-    let subBack = {backgroundColor: subColor};
+    let subBack = {backgroundColor: selectedColor};
     let mainFontColor = {color: mainColor};
     let subFontColor = {color: subColor};
     let isValid = (this.props.singleDate==true)? startDate!=null : !startDate || endDate;
@@ -348,7 +350,7 @@ export default class Calendar extends Component {
                 <View style={styles.confirmBtn}>
                   <Text
                     ellipsisMode="tail" numberOfLines={1}
-                    style={[styles.confirmText, subFontColor]}>
+                    style={[styles.confirmText]}>
                     {this._i18n('save', 'text')}
                   </Text>
                 </View>

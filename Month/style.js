@@ -15,7 +15,7 @@ export default StyleSheet.create({
   monthTitleText: {
     fontSize: 24,
     lineHeight: 24,
-    fontWeight: '300'
+    fontFamily:"RockoFLF-Bold"
   },
   dayRow: {
     flex: 1,

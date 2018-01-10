@@ -2,7 +2,7 @@
  * Created by TinySymphony on 2017-05-11.
  */
 
-import React, {PropTypes, Component} from 'react';
+import React, {Component} from 'react';
 import {
   View,
   Text,
@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import Moment from 'moment';
 import styles from './style';
+import PropTypes from 'prop-types';
 
 export default class Day extends Component {
   static propTypes = {
@@ -60,9 +61,9 @@ export default class Day extends Component {
     } = this.props;
     let text = date ? date.date() : '';
     let mainColor = {color: color.mainColor};
-    let subColor = {color: color.subColor};
+    let subColor = {color: color.subColor, fontFamily:"GothamPro"};
     let mainBack = {backgroundColor: color.mainColor};
-    let subBack = {backgroundColor: color.subColor};
+    let subBack = {backgroundColor: '#34bbc5' /*color.subColor*/};
     return (
       <View
         style={[
