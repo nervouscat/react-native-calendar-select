@@ -61,7 +61,7 @@ export default class Day extends Component {
     } = this.props;
     let text = date ? date.date() : '';
     let mainColor = {color: color.mainColor};
-    let subColor = {color: color.subColor, fontFamily:"GothamPro"};
+    let subColor = {color: color.subColor, fontFamily:"SharpSans-Semibold"};
     let mainBack = {backgroundColor: color.mainColor};
     let subBack = {backgroundColor: '#34bbc5' /*color.subColor*/};
     return (

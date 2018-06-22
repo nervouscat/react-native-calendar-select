@@ -47,7 +47,7 @@ export default StyleSheet.create({
   resultText: {
     fontSize: resultFontSize,
     marginVertical: 4,
-    fontFamily:"RockoFLF-Bold",
+    fontFamily:"SharpSans-Bold",
   },
   clearText: {
     fontSize: 18,
@@ -70,7 +70,7 @@ export default StyleSheet.create({
     flex: 1,
     fontSize: weekTextFontSize,
     textAlign: 'center',
-    fontFamily:"GothamPro"
+    fontFamily:"SharpSans-SemiBold"
   },
   scroll: {
     flex: 9,
@@ -100,7 +100,7 @@ export default StyleSheet.create({
   confirmText: {
     fontSize: 20,
     fontWeight: 'bold',
-    fontFamily:"RockoFLF-Bold",
+    fontFamily:"SharpSans-Bold",
     textAlign: 'center',
     color: 'rgba(255, 255, 255, 1)'
 
