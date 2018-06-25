@@ -242,7 +242,7 @@ export default class Calendar extends Component {
       borderColor = 'rgba(255, 255, 255, 0.50)'
     } = this.props.color;
     let color = {mainColor, subColor, borderColor};
-    let subFontColor = {color: subColor};
+    let subFontColor = {color: "#B0C2C6"};
     let subBack = {backgroundColor: subColor};
     if(this.props.singleDate==true){
       return ( <View style={styles.result}>
@@ -290,7 +290,7 @@ export default class Calendar extends Component {
     const {
       mainColor = '#15aaaa',
       subColor = '#fff',
-      selectedColor = '#34bbc5',
+      selectedColor = '#17C2DA',
       borderColor = 'rgba(255, 255, 255, 0.50)'
     } = this.props.color;
     let color = {mainColor, subColor, borderColor};
