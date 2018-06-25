@@ -248,11 +248,11 @@ export default class Calendar extends Component {
       return ( <View style={styles.result}>
 
             <View style={styles.resultPart}>
-              <Text style={[styles.resultText, styles.endText, subFontColor]}>
-                {endDateText || this._i18n('selected', 'text')}
+              <Text style={[styles.resultText, styles.startText, subFontColor]}>
+                {startDateText || this._i18n('selected', 'text')}
               </Text>
-              <Text style={[styles.resultText, styles.endText, subFontColor]}>
-                {endWeekdayText || this._i18n('date', 'text')}
+              <Text style={[styles.resultText, styles.startText, subFontColor]}>
+                {startDateText || this._i18n('date', 'text')}
               </Text>
             </View>
           </View>)
