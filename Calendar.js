@@ -288,7 +288,7 @@ export default class Calendar extends Component {
       endWeekdayText
     } = this.state;
     const {
-      mainColor = '#15aaaa',
+      mainColor = '#17C2DA',
       subColor = '#fff',
       selectedColor = '#17C2DA',
       borderColor = 'rgba(255, 255, 255, 0.50)'
