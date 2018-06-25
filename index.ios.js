@@ -49,7 +49,7 @@ export default class calendar extends Component {
         'save': 'Confirm',
         'clear': 'Reset'
       },
-      'date': 'DD / MM'  // date format
+      'date': 'DD / MM / YY'  // date format
     };
     // optional property, too.
     let color = {

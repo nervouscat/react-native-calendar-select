@@ -55,9 +55,9 @@ export default class Calendar extends Component {
       'w': ['', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
       'weekday': ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
       'text': {
-        'start': 'start',
-        'end': 'end',
-        'date': 'date',
+        'start': '',
+        'end': '',
+        'date': '',
         'save': 'save',
         'clear': 'reset',
         'selected': 'selected'
@@ -252,7 +252,7 @@ export default class Calendar extends Component {
                 {startDateText || this._i18n('selected', 'text')}
               </Text>
               <Text style={[styles.resultText, styles.startText, subFontColor]}>
-                {startDateText || this._i18n('date', 'text')}
+                {startWeekdayText || this._i18n('date', 'text')}
               </Text>
             </View>
           </View>)
