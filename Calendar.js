@@ -315,6 +315,7 @@ export default class Calendar extends Component {
                 style={styles.closeIcon}
                 source={{uri: ICON.close}}
                 resizeMode="cover"/>
+                </TouchableHighlight>
           </View>
           {this._renderReturn()}
           <View style={styles.week}>
