@@ -21,7 +21,8 @@
 		"calendar"
 	],
 	"dependencies": {
-		"moment": "^2.18.1"
+		"moment": "^2.18.1",
+		"react-native-linear-gradient": "^2.4.0"
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.0",

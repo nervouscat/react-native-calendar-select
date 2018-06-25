@@ -266,7 +266,7 @@ export default class Calendar extends Component {
                 {startWeekdayText || this._i18n('date', 'text')}
               </Text>
             </View>
-            
+
             <View style={styles.resultPart}>
               <Text style={[styles.resultText, styles.endText, subFontColor]}>
                 {endDateText || this._i18n('end', 'text')}
@@ -302,7 +302,7 @@ export default class Calendar extends Component {
     let isClearVisible = startDate || endDate;
     return (
       <Modal
-        animationType={'none'}
+        animationType={'slide'}
         visible={this.state.isModalVisible}
         onRequestClose={this.close}>
         <View style={[styles.container, mainBack]}>
@@ -315,13 +315,6 @@ export default class Calendar extends Component {
                 style={styles.closeIcon}
                 source={{uri: ICON.close}}
                 resizeMode="cover"/>
-            </TouchableHighlight>
-            {isClearVisible && <TouchableHighlight
-              underlayColor="transparent"
-              activeOpacity={0.8}
-              onPress={this.clear}>
-              <Text style={[styles.clearText, subFontColor]}>{this._i18n('clear', 'text')}</Text>
-            </TouchableHighlight>}
           </View>
           {this._renderReturn()}
           <View style={styles.week}>
