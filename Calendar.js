@@ -198,14 +198,23 @@ export default class Calendar extends Component {
   }
   open () {
     if(this.props.singleDate==true){
+      const {
+        startDate,
+        endDate,
+        format
+      } = this.props;
+      let start = Moment(startDate, format);
+      let end = Moment(endDate, format);
+      let isStartValid = start.isValid() && start >= this._minDate && start <= this._maxDate;
+      let isEndValid = end.isValid() && end >= this._minDate && end <= this._maxDate;
       this.setState({
         isModalVisible: true,
-        startDate: day,
-        startDateText: this._i18n(day, 'date'),
-        startWeekdayText: this._i18n(day.isoWeekday(), 'weekday'),
-        endDate: day,
-        endDateText: this._i18n(day, 'date'),
-        endWeekdayText: this._i18n(day.isoWeekday(), 'weekday')
+        startDate: start,
+        startDateText: this._i18n(start, 'date'),
+        startWeekdayText: this._i18n(start.isoWeekday(), 'weekday'),
+        endDate: start,
+        endDateText: this._i18n(start, 'date'),
+        endWeekdayText: this._i18n(start.isoWeekday(), 'weekday')
       });
     }
     else{
