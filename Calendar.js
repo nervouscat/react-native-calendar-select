@@ -238,8 +238,8 @@ export default class Calendar extends Component {
     } = this.state;
      const {
       mainColor = '#15aaaa',
-      subColor = '#fff',
-      borderColor = 'rgba(255, 255, 255, 0.50)'
+      subColor = '#17C2DA',
+      borderColor = 'rgba(255, 255, 255, 1)'
     } = this.props.color;
     let color = {mainColor, subColor, borderColor};
     let subFontColor = {color: "#B0C2C6"};
