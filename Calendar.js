@@ -199,7 +199,7 @@ export default class Calendar extends Component {
   open () {
     if(this.props.singleDate==true){
       this.setState({
-        isModalVisible: true
+        isModalVisible: true,
         startDate: day,
         startDateText: this._i18n(day, 'date'),
         startWeekdayText: this._i18n(day.isoWeekday(), 'weekday'),
