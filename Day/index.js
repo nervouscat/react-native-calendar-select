@@ -63,7 +63,7 @@ export default class Day extends Component {
     let mainColor = {color: color.mainColor};
     let subColor = {color: color.subColor, fontFamily:"SharpSans-Semibold"};
     let mainBack = {backgroundColor: color.mainColor};
-    let subBack = {backgroundColor: color.subColor /*color.subColor*/};
+    let subBack = {backgroundColor: "#17C2DA" /*color.subColor*/};
     return (
       <View
         style={[
