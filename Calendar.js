@@ -197,10 +197,23 @@ export default class Calendar extends Component {
     });
   }
   open () {
+    if(this.props.singleDate==true){
+      this.setState({
+        isModalVisible: true
+        startDate: day,
+        startDateText: this._i18n(day, 'date'),
+        startWeekdayText: this._i18n(day.isoWeekday(), 'weekday'),
+        endDate: day,
+        endDateText: this._i18n(day, 'date'),
+        endWeekdayText: this._i18n(day.isoWeekday(), 'weekday')
+      });
+    }
+    else{
+      this.setState({
+        isModalVisible: true
+      });
+    }
 
-    this.setState({
-      isModalVisible: true
-    });
   }
   clear () {
     this.setState({
