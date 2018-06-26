@@ -197,29 +197,35 @@ export default class Calendar extends Component {
     });
   }
   open () {
+    const {
+      startDate,
+      endDate,
+      format
+    } = this.props;
+    let start = Moment(startDate, format);
+    let end = Moment(endDate, format);
+    let isStartValid = start.isValid() && start >= this._minDate && start <= this._maxDate;
+    let isEndValid = end.isValid() && end >= this._minDate && end <= this._maxDate;
     if(this.props.singleDate==true){
-      const {
-        startDate,
-        endDate,
-        format
-      } = this.props;
-      let start = Moment(startDate, format);
-      let end = Moment(endDate, format);
-      let isStartValid = start.isValid() && start >= this._minDate && start <= this._maxDate;
-      let isEndValid = end.isValid() && end >= this._minDate && end <= this._maxDate;
       this.setState({
         isModalVisible: true,
-        startDate: start,
-        startDateText: this._i18n(start, 'date'),
-        startWeekdayText: this._i18n(start.isoWeekday(), 'weekday'),
-        endDate: start,
-        endDateText: this._i18n(start, 'date'),
-        endWeekdayText: this._i18n(start.isoWeekday(), 'weekday')
+        startDate: isStartValid ? start : null,
+        startDateText: isStartValid ? this._i18n(start, 'date') : '',
+        startWeekdayText: isStartValid ? this._i18n(start.isoWeekday(), 'weekday') : '',
+        endDate: isStartValid ? start: null,
+        endDateText: isStartValid ? this._i18n(start, 'date') : '',
+        endWeekdayText: isStartValid ? this._i18n(start.isoWeekday(), 'weekday') : ''
       });
     }
     else{
       this.setState({
-        isModalVisible: true
+        isModalVisible: true,
+        startDate: isStartValid ? start : null,
+        startDateText: isStartValid ? this._i18n(start, 'date') : '',
+        startWeekdayText: isStartValid ? this._i18n(start.isoWeekday(), 'weekday') : '',
+        endDate: isEndValid ? end: null,
+        endDateText: isEndValid ? this._i18n(end, 'date') : '',
+        endWeekdayText: isEndValid ? this._i18n(end.isoWeekday(), 'weekday') : ''
       });
     }
 
