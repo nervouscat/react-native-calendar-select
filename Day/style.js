@@ -36,12 +36,13 @@ export default StyleSheet.create({
   },
   dayText: {
     fontSize: 16,
-    fontWeight: '400',
+    fontFamily: 'SharpSans-Medium'
     textAlign: 'center'
   },
   dayTextDisabled: {
     fontSize: 16,
-    color: 'rgba(176, 194, 198, 1)',
+    fontFamily: 'SharpSans-Medium'
+    color: 'rgba(176, 194, 198, 0.8)',
     textAlign: 'center'
   }
 });
